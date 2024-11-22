@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --clr-primary: #7380ec;
+    --clr-danger: #ff7782;
+    --clr-success: #41f1b6;
+    --clr-white: #fff;
+    --clr-info-dark: #7d8da1;
+    --clr-info-light: #dce1eb;
+    --clr-dark: #363949;
+    --clr-warning: #ff4edc;
+    --clr-light: rgba(132, 139, 200, 0.18);
+    --clr-primary-variant: #111e88;
+    --clr-dark-variant: #677483;
+    --clr-color-background: #f6f6f9;
+  
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+  
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--clr-light);
+}
+
+body.dark-theme {
+    --clr-primary: #333;
+    --clr-danger: #ff7782;
+    --clr-success: #41f1b6;
+    --clr-white: #1b1b1b;
+    --clr-info-dark: #dcdcdc;
+    --clr-info-light: #2f2f2f;
+    --clr-dark: #fff;
+    --clr-warning: #ff4edc;
+    --clr-light: rgba(255, 255, 255, 0.08);
+    --clr-primary-variant: #7380ec;
+    --clr-dark-variant: #9ca5b9;
+    --clr-color-background: #181818;
+    
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    list-style: none;
+    appearance: none;
+}
+
+
+body{
+    font-family: "Poppins", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    font-size: o.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    background: var(--clr-color-background);
+}
+.container{
+    display: grid;
+    width: 96%;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 14rem;
+    margin: 0 auto;
+
+}
+a{
+    color:var(--clr-dark);
+}
+h1{
+    font-weight:800 ;
+    font-size: 1.8rem;
+}
+h2{
+    color: var(--clr-primary-variant);
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 0.87rem;
+}
+h4{
+    font-size: 0.8;
+}
+h5{
+    font-size: 0.77rem;
+}
+small{
+    color: var(--clr-primary-variant);
+    font-size: 0.75rem;
+}
+.profile-photo img{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    
+}
+.text-muted{
+    color:var(--clr-info-dark);
+}
+p{
+    color: var(--clr-dark-variant);
+}
+b{
+    color: var(--clr-dark);
+}
+.primary{
+    color: var(--clr-primary);
+}
+.danger{
+    color: var(--clr-danger);
+}
+.success{
+    color: var(--clr-success);
+}
+.warning{
+    color: var(--clr-warnig);
+}
+/*aside*/
+aside{
+    height: 100vh;
+}
+aside .top{
+    background-color: var(--clr-white);
+    display: flex;
+    align-content: center;
+    margin-top: 1.4rem;
+}
+aside .logo{
+    display: flex;
+    gap: 1rem;
+}
+aside .top div .home{
+    color:red;
+   
+}
+/*sidebar*/
+aside .sidebar{
+    background-color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    position: relative;
+    top: 1rem;
+}
+
+aside h3{
+    font-weight: 400;
+}
+aside .sidebar a{
+    display: flex;
+    color: var(--clr-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    height: 3.2rem;
+    transition: all .1s ease-in;
+}
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all .1s ease-in;
+}
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+}
+aside .sidebar a.active{
+    background-color: var( --clr-warning);
+    color: var(--clr-primary);
+    margin-left: 0px;
+    border-left: 5px solid var(--clr-primary);
+}
+aside .sidebar a.active::before{
+    content: "";
+    width: 6px;
+    height: 100%;
+    background-color: var(--clr-primary);
+}
+aside .sidebar a:hover{
+    color: var(--clr-primary);
+    transition: .4s ease;
+}
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+}
+
+/*Main*/
+
+main {
+    margin-top: 1.4rem; /* This is fine, it gives space between the top of the page and the main content */
+    width: 100%; /* Make it take the full width of its container */
+}
+
+main input {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: var(--clr-dark); /* Keep the input styles consistent with your theme */
+}
+
+main {
+    margin-top: 1.4rem;
+    width: auto;
+}
+
+main .insight {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    gap: 1.6rem; /* Adds space between the grid items */
+}
+
+main .insight > div {
+    background-color: var(--clr-white); /* Card background color */
+    padding: 1.5rem; /* Padding inside the card */
+    border-radius: 0.5rem; /* Rounded corners */
+    margin-top: 1rem; /* Space between each row of cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a floating effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+main .insight > div:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.report span,
+.appointment span,
+.health-tips span {
+    display: inline-flex; /* Use flexbox for centering the icon */
+    width: 40px; /* Circle width */
+    height: 40px; /* Circle height */
+    border-radius: 50%; /* Makes the span circular */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: white; /* Icon color */
+    font-size: 1.5rem; /* Adjust font size of icons */
+}
+
+.report span {
+    background-color: #007BFF; /* Blue for Total Sessions */
+}
+
+.appointment span {
+    background-color: #28A745; /* Green for Upcoming Appointment */
+}
+
+.health-tips span {
+    background-color: #6F42C1; /* Purple for Health Tips */
+}
+
+main .insight > div .middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space items evenly */
+}
+
+main .insight > div .middle h1 {
+    font-size: 1.6rem; /* Adjust the heading size */
+}
+
+main h1 {
+    color: var(--clr-dark); /* Main dashboard title color */
+}
+
+main .insight h1,
+main .insight h3,
+main .insight p {
+    color: var(--clr-dark); /* Text color for headings and paragraphs */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main .insight {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+}
+.history {
+    margin-top: 2rem; /* Add margin above the history section */
+    padding: 1.5rem; /* Add padding around the history section */
+    background-color: var(--clr-white); /* Background color for the section */
+    border-radius: 0.5rem; /* Rounded corners for the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a floating effect */
+}
+
+.history h1 {
+    margin-bottom: 1rem; /* Space below the title */
+    color: var(--clr-dark); /* Color for the title */
+}
+
+table {
+    width: 100%; /* Full width table */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 1rem; /* Space above the table */
+}
+
+th, td {
+    padding: 1rem; /* Padding inside cells */
+    text-align: left; /* Left align text */
+    border-bottom: 1px solid #ddd; /* Bottom border for rows */
+}
+
+th {
+    background-color: var(--clr-light-gray); /* Light background for header */
+    color: var(--clr-dark); /* Text color for header */
+}
+
+td {
+    color: var(--clr-dark); /* Text color for table cells */
+}
+
+.warning {
+    color: orange; /* Color for warning status */
+}
+
+.primary {
+    color: blue; /* Color for primary action */
+}
+
+.primary button {
+    background-color: transparent; /* Background for button */
+    border: none; /* Remove border */
+    color: inherit; /* Inherit color from td */
+    cursor: pointer; /* Change cursor to pointer */
+    text-decoration: underline; /* Underline text for buttons */
+}
+
+.primary button:hover {
+    text-decoration: none; /* Remove underline on hover */
+    color: darkblue; /* Darken color on hover */
+}
+main table tbody tr:last-child td{
+    border: none;
+}
+.top {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: space-between; /* Spreads the items across the row */
+    padding: 1rem; /* Adjust padding as needed */
+    background-color: var(--clr-white); /* Set a background color */
+    border-bottom: 1px solid #e0e0e0; /* Optional border */
+}
+
+#menu_bar {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu_bar span {
+    font-size: 1.8rem; /* Adjust the size of the menu icon */
+    color: var(--clr-dark); /* Icon color */
+}
+
+.theme-toggler {
+    display: flex;
+    gap: 0.5rem; /* Adds space between the theme icons */
+}
+
+.theme-toggler span {
+    font-size: 1.5rem; /* Adjust the size of the theme icons */
+    cursor: pointer;
+    color: var(--clr-dark); /* Icon color */
+}
+
+.profile {
+    display: flex;
+    align-items: center; /* Aligns the profile info and image vertically */
+    gap: 1rem; /* Adds space between the profile info and photo */
+}
+
+.profile .info {
+    text-align: right; /* Aligns the text to the right */
+}
+
+.profile .info p {
+    margin: 0; /* Removes the default margin */
+    font-size: 0.9rem; /* Adjusts text size */
+}
+
+.profile .info p:first-child {
+    font-weight: bold; /* Makes the name bold */
+}
+
+
+
+.text-muted {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.recent-updates, .progress-summary, .shortcuts {
+    padding: 0.8rem;
+    background-color: var(--clr-white);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+}
+
+.recent-updates h4, .progress-summary h4, .shortcuts h4 {
+    font-size: 1.1rem;
+    color: var(--clr-dark);
+    margin-bottom: 0.5rem;
+}
+
+.recent-updates ul, .progress-summary ul, .shortcuts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-updates ul li, .progress-summary ul li, .shortcuts ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--clr-dark);
+}
+
+.recent-updates ul li span, .progress-summary ul li span, .shortcuts ul li span {
+    font-size: 1.3rem;
+    color: #007BFF;
+    margin-right: 0.4rem;
+}
+@media screen and (max-width:1200px){
+    body{
+        background-color:red;
+    }
+}

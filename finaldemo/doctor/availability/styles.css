@@ -1,0 +1,175 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    min-height: 100vh;
+}
+
+.dashboard {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f1f1f1;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebar .profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.sidebar .profile p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #34495e;
+}
+
+/* Add New Availability Section */
+.add-availability form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.add-availability label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.add-availability input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.add-availability button {
+    grid-column: span 2;
+    padding: 12px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-availability button:hover {
+    background-color: #3498db;
+}
+
+/* Current Availability Table */
+.current-availability table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.current-availability table th, .current-availability table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.current-availability table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.current-availability table td a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.current-availability table td a:hover {
+    text-decoration: underline;
+}

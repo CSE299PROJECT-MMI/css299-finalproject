@@ -1,0 +1,140 @@
+/* styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+nav {
+    background-color: #2c3e50;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav h2 {
+    font-size: 1.6em;
+    text-align: center;  /* Center the title */
+    color: #ecf0f1;
+    margin-bottom: 30px;
+}
+
+/* Logo styling */
+nav .logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Styling for the navigation menu */
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    flex-grow: 1;
+}
+
+nav ul li {
+    margin-bottom: 15px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/* Position the logout icon at the bottom */
+aside {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* styles.css */
+
+/* Basic styles for the button and other elements remain the same */
+
+.logout-button {
+    /* Initial background color */
+    background-color: #2c3e50;
+    color: #f5f8fa;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease; /* Transition added here */
+}
+
+
+.logout-button:hover {
+      
+    transform: scale(1.05); 
+    
+}
+
+/* Logout icon transition (optional) */
+.logout-button i {
+    transition: transform 0.2s ease; /* Add transition to the icon */
+}
+
+.logout-button:hover i {
+    transform: rotate(180deg);  /* Rotate the icon when hovered */
+}
+
+
+.dashboard-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.dashboard-content section {
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.dashboard-content section:hover {
+    transform: scale(1.02);
+}
+
+.dashboard-content section h3 {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.dashboard-content section p {
+    font-size: 1em;
+    color: #7f8c8d;
+}
